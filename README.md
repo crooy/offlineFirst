@@ -9,29 +9,41 @@ uitleg stijl: walkthrough
 title slide: shameless plug for withlocals
 who am i and plug WL
 —
-slide: black empty screen
+slide:  empty screen with just title of the talk
 text: Good evening.
 
-Who here likes to take out his phone on the toilet to read something? HackerNews perhaps?  
-Anybody here ever used his phone to avoid a conversation with some weirdo in the bus or an elevator, or something?
-What do you do when you realize you have no 3g or wifi? Do you fake reading something or do you switch to instapaper?
+Who here likes to take out his phone on the toilet to read something? reading HackerNews?
+Who here works in an office with bad wifi in the toilet?
+Ever tried to send a whatsapp or tag a beer using untappd in bar with not 3g or wifi?
 
+slide: screenshot of no-network error in untappd
+So why are so many mobile apps (web or native alike) treat being offline as an error? 
 Why is Hacker news not readable offline without installing an app on your phone?
 
-After this talk you will want to make every webapp offline first.
+There is a paradigm shift coming and its called offline-first.
+
+During the course of this talk I will try to convince you of this.
 I am going to show you how to stop making websites and start making offline first applications.
+After this talk you will be annoyed with untappd and HackerNews too.
 ————————
 
-slide: Mobile first first,
+slide: first Mobile first
 
 text:
 I think everybody here knows about ‘mobile first’. Bootstrap et al. have made it incredibly simple to make responsive websites. I think that once management and marketing are using a buzzword we can conclude it is no longer special. 
 
-At my company management and marketing are not talking about offline-first. Because it solves a problem that people accept to have, which is that you cannot use the internet when you dont have internet….accept that you can!
+At our company, management and marketing are not talking about offline-first. Do they ask for a responsive website? Yes. 
+
+------------
+slide: horse vs car image something funny with ford reference
+
+text: Why do no customers or managers ask for an offline first website?
+Because offline first solves a problem that people accepted.
+You cannot use the internet without internet… Well i am here to say that you can. 
 
 —————————
 
-slide: offline first applications:
+slide: offline first:
   - include mobile.first;
 - load without internet
 - have (partial) functionality while offline
@@ -39,6 +51,33 @@ slide: offline first applications:
 
 text:
 what makes an app offline, …
+
+slide: we have the technology
+
+- service workers
+- web workers
+- cache api
+- storage api
+
+text: explain service workers, etc.
+
+---------
+demo time:
+
+show demo app loading normally, show offline, and show lie-fi version.
+
+uncomment service worker magic, show loading offline show loading lie-fi
+ - cache resources
+ - cache XHR GET requests
+ 
+demo image fallback
+
+demo background sync 
+
+--------------
+slide: happy unicorn
+
+text: now this is great, and it works. This is just the technology. Now you are left with actual problems like: what should the fallback image be? what about conflicts. What if ...
 
 ——————
 
