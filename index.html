@@ -3,10 +3,10 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Offline First</title>
-	<meta name="author" content="Ronald Crooy" />
-	<meta name="description" content="Meetup presentation about offline first development" />
-	<meta name="keywords"  content="offline-first, webdevelopment" />
+	<title>Maven</title>
+	<meta name="author" content="Judith Crooy" />
+	<meta name="description" content="Explanation about Maven" />
+	<meta name="keywords"  content="java, maven, webdevelopment" />
 	<meta name="Resource-type" content="Document" />
 
 
@@ -20,7 +20,7 @@
 		$(document).ready(function() {
 
 			$('#fullpage').fullpage({
-				sectionsColor: ['#C9E4CA','#87BBA2', '#55828B', '#3B6064', '#364958'],
+				sectionsColor: ['#52D1DC','#E8F1F2', '#99E1D9', '#B3EFB2', '#7A9E7E'],
 				 anchors: ['home', 'intro', 'mobile-first', 'offline-first', 'demo'],
 				menu: '#menu',
 				scrollingSpeed: 1000
@@ -123,12 +123,31 @@
 	</div> 
 		
 	<div class="section" id="section2">
-		<div class="intro">
-			<h1>How does it work</h1>
-			<p>The most important file is the POM (Project Object Model).</p>
-			<p>POM contains the structure of the project, and it is up to Maven to build it, based on this info.</p>
-			<p>A POM file does not contain code, it is an XML representation of a Maven project.</p>
-			<p>I know it is vague. But understanding it all would take the magic out.</p>
+		<div class="slide">
+			<div class="intro">
+				<h1>How does it work</h1>
+				<p>The most important file is the POM (Project Object Model).</p>
+				<p>POM contains the structure of the project, and it is up to Maven to build it, based on this info.</p>
+				<p>A POM file does not contain code, it is an XML representation of a Maven project.</p>
+				<p>I know it is vague. But understanding it all would take the magic out.</p>
+			</div>
+		</div>
+
+		<div class="slide">
+			<div class="intro">
+				<h1>The POM file</h1>
+				<img src="imgs/POMproject.png" class="codesnippet" alt="Project info in the POM"/>
+				<h3>Contains info about the project</h3>
+			</div>
+		</div>
+
+		<div class="slide">
+			<div class="intro">
+				<img src="imgs/POMdependencies.png" class="codesnippet" alt="Project info in the POM"/>
+				<h3>Info about dependencies</h3>
+				<img src="imgs/POMplugins.png" class="codesnippet" alt="Project info in the POM"/>
+				<h3>And about plugins you're using</h3>
+			</div>
 		</div>
 	</div>
 
