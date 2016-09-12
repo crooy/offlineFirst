@@ -10,12 +10,12 @@
 	<meta name="Resource-type" content="Document" />
 
 
-	<link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css" />	
+	<link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="examples.css" />
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="bower_components/fullpage.js/jquery.fullPage.min.js"></script>		
-	
+	<script src="bower_components/fullpage.js/jquery.fullPage.min.js"></script>
+
 	<script type="text/javascript">
 		$(document).ready(function() {
 
@@ -31,58 +31,61 @@
 </head>
 
 <body>
-<!--Dit is het navigatiemenu links boven -->
-<ul id="menu">
-	<li data-menuanchor="home"><a href="#home">Home</a></li>
-	<li data-menuanchor="intro"><a href="#section1">Intro</a></li>
-	<li data-menuanchor="mobile-first"><a href="#section2">Mobile first</a></li>
-	<li data-menuanchor="offline-first"><a href="#section3">Offline first</a></li>
-	<li data-menuanchor="demo"><a href="#section4">Demo</a></li>
-</ul>
-
 
 <div id="fullpage">
 
-	<div class="section active" id="home">
-		<h1>Offline first</h1>
-		 <input type="hidden" name="id" value="1" />
-		<img id="unicorn" src="imgs/offlineappmeme.jpg" alt="Offline app meme" />
-	</div>
-
 	<!-- Hier begint de eerste sectie, met sliders -->
-	<div class="section" id="section1">
+	<div class="section active" id="section1">
 
 		<div class="slide active">
 			<div class="intro">
-				<h1>Intro</h1>
+				<h1>Offline first</h1>
+				<h2>Ronald Crooy</h2>
+			</div>
+		</div>
+
+		<div class="slide ">
+			<div class="intro">
+				<h1>Withlocals.com</h1>
 				<h2>Shameless Withlocals plug &hearts;</h2>
 				<img src="imgs/WLscreenshot.png" class='cartoon' alt="Withlocals home screen">
 			</div>
 		</div>
 
-		<div class="slide" id="wordcloud">
+		<div class="slide" id="title">
 			<div class="intro">
 				<h1>No wifi - no social life</h1>
 				<h3>How will they know you drank beer?</h3>
-				<img src="imgs/untappdnonetwork.png" class="screenshot" alt="Untappd error"/>
-			</div>
-		</div>
-	</div> 
-		
-	<div class="section" id="section2">
-		<div class="slide">
-			<div class="intro">
-				<h1>First Mobile First</h1>
-				<p>Some stuff here about mobile first.</p>
-				<p>So what was first, the mobile or the offline?</p>
+				<img src="imgs/untappd-offline.png" class="screenshot" alt="Untappd error"/>
 			</div>
 		</div>
 
-		<div class="slide">
+		<div class="slide" id="title">
 			<div class="intro">
-				<h1>More on mobile first</h1>
+				<h1>No 3g - no HN</h1>
+				<img src="imgs/HN-offline.png" class="screenshot" alt="Untappd error"/>
 			</div>
 		</div>
+	</div>
+
+
+	<div class="section" id="section2">
+
+		<div class="slide">
+			<div class="intro">
+				<h1>First Mobile First</h1>
+				<img src="imgs/mobile-first.jpg" class="screenshot" alt="Untappd error"/>
+			</div>
+		</div>
+
+		<div class="slide" id="title">
+			<div class="intro">
+				<h1>Offline first</h1>
+			 	<input type="hidden" name="id" value="1" />
+				<img id="unicorn" src="imgs/offlineappmeme.jpg" alt="Offline app meme" />
+			</div>
+		</div>
+
 	</div>
 
 
@@ -131,14 +134,14 @@
 			<h1>Useful Links</h1>
 			<p> Quick start Maven with Spring Boot.</p>
 			<p></p>
-			<p> <a href="http://maven.apache.org/guides/" target="_blank"> Maven official documentation</a> & how to use 
+			<p> <a href="http://maven.apache.org/guides/" target="_blank"> Maven official documentation</a> & how to use
 			<a href="https://spring.io/guides/gs/maven/" target="_blank">Maven with Spring Boot.</a></p>
 			<br>
 			<img src="imgs/google.jpg" class='cartoon' alt="Google is your friend"/>
 			<h3>Remember: Google is your friend.</h3>
 		</div>
 	</div>
-		
+
 </div>
 
 </body>

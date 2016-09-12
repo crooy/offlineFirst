@@ -17,7 +17,7 @@ Who here works in an office with bad wifi in the toilet?
 Ever tried to send a whatsapp or tag a beer using untappd in bar with not 3g or wifi?
 
 slide: screenshot of no-network error in untappd
-So why are so many mobile apps (web or native alike) treat being offline as an error? 
+So why are so many mobile apps (web or native alike) treat being offline as an error?
 Why is Hacker news not readable offline without installing an app on your phone?
 
 There is a paradigm shift coming and its called offline-first.
@@ -30,16 +30,16 @@ After this talk you will be annoyed with untappd and HackerNews too.
 slide: first Mobile first
 
 text:
-I think everybody here knows about ‘mobile first’. Bootstrap et al. have made it incredibly simple to make responsive websites. I think that once management and marketing are using a buzzword we can conclude it is no longer special. 
+I think everybody here knows about ‘mobile first’. Bootstrap et al. have made it incredibly simple to make responsive websites. I think that once management and marketing are using a buzzword we can conclude it is no longer special.
 
-At our company, management and marketing are not talking about offline-first. Do they ask for a responsive website? Yes. 
+At our company, management and marketing are not talking about offline-first. Do they ask for a responsive website? Yes.
 
 ------------
 slide: horse vs car image something funny with ford reference
 
 text: Why do no customers or managers ask for an offline first website?
 Because offline first solves a problem that people accepted.
-You cannot use the internet without internet… Well i am here to say that you can. 
+You cannot use the internet without internet… Well i am here to say that you can.
 
 —————————
 
@@ -69,10 +69,10 @@ show demo app loading normally, show offline, and show lie-fi version.
 uncomment service worker magic, show loading offline show loading lie-fi
  - cache resources
  - cache XHR GET requests
- 
+
 demo image fallback
 
-demo background sync 
+demo background sync
 
 --------------
 slide: happy unicorn
@@ -104,10 +104,10 @@ service-worker-slide:
 - background sync
 - push notifications
 
-A service worker is a proxy between your normal code and the network. 
+A service worker is a proxy between your normal code and the network.
 
 - things you can do with it
-- 
+-
 
 
 App: LostBoy - help the boy to find his lost stuff.
@@ -145,4 +145,3 @@ show offline cache using service workers
     4. adding a service worker for offline application from the start forces:
         1. thinking about data-storage and synchronisation (serialisation only or read/write from storage)
         2. thinking about cache invalidation (hash-filenames)
-
