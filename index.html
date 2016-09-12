@@ -20,21 +20,12 @@
 		$(document).ready(function() {
 
 			$('#fullpage').fullpage({
-				sectionsColor: ['#52D1DC','#E8F1F2', '#99E1D9', '#4B7F52', '#7DD181'],
+				sectionsColor: ['#52D1DC','#E8F1F2', '#99E1D9', '#84C0C6', '#EBEBD3'],
 				 anchors: ['home', 'intro', 'mobile-first', 'offline-first', 'demo'],
 				menu: '#menu',
 				scrollingSpeed: 1000
 			});
-
-			// This is a test to get an API working
-			// $('.button').click(function(){
-			// 	$.get("http://hipsterjesus.com/api/", function(result){
-			// 		alert("I got this from the server:" + result.text);
-			// 	});
-			// });
 		});
-
-		
 	</script>
 
 </head>
@@ -53,7 +44,7 @@
 <div id="fullpage">
 
 	<div class="section active" id="home">
-		<h1>Offline first development</h1>
+		<h1>Offline first</h1>
 		 <input type="hidden" name="id" value="1" />
 		<img id="unicorn" src="imgs/offlineappmeme.jpg" alt="Offline app meme" />
 	</div>
@@ -71,46 +62,9 @@
 
 		<div class="slide" id="wordcloud">
 			<div class="intro">
-				<!-- This is the wordcloud-->
-				<img src="imgs/Mavencloud.png" class="cartoon" alt="Maven wordcloud"/>
-				<!-- <a href="http://tagul.com/">Created with Tagul.com</a> --> 
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="intro">
-				<h1>What is a build tool</h1>
-				<p>A build tool basically makes sure that your project ends up as an executable file (.jar / .war).</p>
-				<p>It helps you automate repetitive tasks such as:</p>
-				<ul>
-					<li>&hearts; compile source code into binary</li>
-					<li>&hearts; package the binary code into executable files</li>
-					<li>&hearts; running tests</li>
-					<li>&hearts; download and manage dependencies</li>
-					<li>&hearts; deploy your project onto production system</li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="intro">
-				<h1>Wait. Dependencies?</h1>
-				<p>Dependencies are the libraries, plugins, tools, frameworks that your web app is using (depending on).</p>
-				<p>These dependencies have dependencies of their own.</p>
-				<p>Sometimes they will depend on different and incompatible versions of the same library.</p>
-				<p>Fixing one dependency will then break another.</p>
-				<p>This is professionally referred to as</p> 
-				<h2>Dependency Hell!!</h2>
-				<p>You do not want to go there.</p> 
-				
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="intro">
-				<h1>Maven is not alone</h1>
-				<img src="imgs/buildsystems.png" class="cartoon" alt="Build tools"/>
-				<h3>And you also have Grunt, Gulp, SBT, Webpack, Rake, Cake&#127874;</h3>
+				<h1>No wifi - no social life</h1>
+				<h3>How will they know you drank beer?</h3>
+				<img src="imgs/untappdnonetwork.png" class="screenshot" alt="Untappd error"/>
 			</div>
 		</div>
 	</div> 
@@ -118,28 +72,15 @@
 	<div class="section" id="section2">
 		<div class="slide">
 			<div class="intro">
-				<h1>How does it work</h1>
-				<p>The most important file is the POM (Project Object Model).</p>
-				<p>POM contains the structure of the project, and it is up to Maven to build it, based on this info.</p>
-				<p>A POM file does not contain code, it is an XML representation of a Maven project.</p>
-				<p>I know it is vague. But understanding it all would take the magic out.</p>
+				<h1>First Mobile First</h1>
+				<p>Some stuff here about mobile first.</p>
+				<p>So what was first, the mobile or the offline?</p>
 			</div>
 		</div>
 
 		<div class="slide">
 			<div class="intro">
-				<h1>The POM file</h1>
-				<img src="imgs/POMproject.png" class="codesnippet" alt="Project info in the POM"/>
-				<h3>Contains info about the project</h3>
-			</div>
-		</div>
-
-		<div class="slide">
-			<div class="intro">
-				<img src="imgs/POMdependencies.png" class="codesnippet" alt="Project info in the POM"/>
-				<h3>Info about dependencies</h3>
-				<img src="imgs/POMplugins.png" class="codesnippet" alt="Project info in the POM"/>
-				<h3>And about plugins you're using</h3>
+				<h1>More on mobile first</h1>
 			</div>
 		</div>
 	</div>
@@ -148,9 +89,8 @@
 	<div class="section" id="section3">
 		<div class="slide">
 			<div class="intro">
-				<h1>When to use build tools</h1>
-				<p>It is always reccommended to use a build tool.</p>
-				<p>Advantages of build tools in general are:</p>
+				<h1>Offline first</h1>
+				<p>Advantages of offline first</p>
 				<ul>
 					<li>Reproducable build: not depending on IDE or computer</li>
 					<li>Saves a lot of time compared to manual build</li>
