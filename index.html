@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Maven</title>
+	<meta name="author" content="Judith Crooy" />
+	<meta name="description" content="Explanation about Maven" />
+	<meta name="keywords"  content="java, maven, webdevelopment" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css" />	
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="bower_components/fullpage.js/jquery.fullPage.min.js"></script>		
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+
+			$('#fullpage').fullpage({
+				sectionsColor: ['#D6EDFF','#84DCC6', '#ACD7EC', '#D6A2AD', '#478978'],
+				 anchors: ['home', 'about-maven', 'how-maven-works', 'why-use-maven', 'links'],
+				menu: '#menu',
+				scrollingSpeed: 1000
+			});
+
+			// This is a test to get an API working
+			// $('.button').click(function(){
+			// 	$.get("http://hipsterjesus.com/api/", function(result){
+			// 		alert("I got this from the server:" + result.text);
+			// 	});
+			// });
+		});
+
+		
+	</script>
+
+</head>
+
+<body>
+<!--Dit is het navigatiemenu links boven -->
+<ul id="menu">
+	<li data-menuanchor="home"><a href="#home">Home</a></li>
+	<li data-menuanchor="about-maven"><a href="#section1">About</a></li>
+	<li data-menuanchor="ajax"><a href="#section2">How it works</a></li>
+	<li data-menuanchor="hands-on"><a href="#section3">Why Maven</a></li>
+	<li data-menuanchor="links"><a href="#section4">Links</a></li>
+</ul>
+
+
+<div id="fullpage">
+
+	<div class="section active" id="home">
+		<h1>Maven</h1>
+		 <input type="hidden" name="id" value="1" />
+		<p>Build stuff</p>
+		<img id="unicorn" src="imgs/buildtoolmeme.jpg" alt="Build tool meme" />
+	</div>
+
+	<!-- Hier begint de eerste sectie, met sliders -->
+	<div class="section" id="section1">
+
+		<div class="slide active">
+			<div class="intro">
+				<h1>Maven. A build tool for Java</h1>
+				<p>Maven helps you build your applications.</p>
+				<p>Great for packaging your project into a usable form.</p>
+				<p>Keeps you out of dependency hell &#x1f525;</p>
+				<p>Presentation content:</p>
+				<div class="button">What is Maven</div><br>
+				<div class="button">How does it work</a></div><br>
+				<div class="button">Why use Maven</div><br>
+				<div class="button">Useful links & documentation</div><br>
+			</div>
+		</div>
+
+		<div class="slide" id="wordcloud">
+			<div class="intro">
+				<!-- This is the wordcloud-->
+				<img src="imgs/Mavencloud.png" class="cartoon" alt="Maven wordcloud"/>
+				<!-- <a href="http://tagul.com/">Created with Tagul.com</a> --> 
+			</div>
+		</div>
+
+		<div class="slide">
+			<div class="intro">
+				<h1>What is a build tool</h1>
+				<p>A build tool basically makes sure that your project ends up as an executable file (.jar / .war).</p>
+				<p>It helps you automate repetitive tasks such as:</p>
+				<ul>
+					<li>&hearts; compile source code into binary</li>
+					<li>&hearts; package the binary code into executable files</li>
+					<li>&hearts; running tests</li>
+					<li>&hearts; download and manage dependencies</li>
+					<li>&hearts; deploy your project onto production system</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="slide">
+			<div class="intro">
+				<h1>Wait. Dependencies?</h1>
+				<p>Dependencies are the libraries, plugins, tools, frameworks that your web app is using (depending on).</p>
+				<p>These dependencies have dependencies of their own.</p>
+				<p>Sometimes they will depend on different and incompatible versions of the same library.</p>
+				<p>Fixing one dependency will then break another.</p>
+				<p>This is professionally referred to as</p> 
+				<h2>Dependency Hell!!</h2>
+				<p>You do not want to go there.</p> 
+				
+			</div>
+		</div>
+
+		<div class="slide">
+			<div class="intro">
+				<h1>Maven is not alone</h1>
+				<img src="imgs/buildsystems.png" class="cartoon" alt="Build tools"/>
+				<h3>And you also have Grunt, Gulp, SBT, Webpack, Rake, Cake&#127874;</h3>
+			</div>
+		</div>
+	</div> 
+		
+	<div class="section" id="section2">
+		<div class="intro">
+			<h1>How does it work</h1>
+			<p>The most important file is the POM (Project Object Model).</p>
+			<p>POM contains the structure of the project, and it is up to Maven to build it, based on this info.</p>
+			<p>A POM file does not contain code, it is an XML representation of a Maven project.</p>
+			<p>I know it is vague. But understanding it all would take the magic out.</p>
+		</div>
+	</div>
+
+
+	<div class="section" id="section3">
+		<div class="slide">
+			<div class="intro">
+				<h1>When to use build tools</h1>
+				<p>It is always reccommended to use a build tool.</p>
+				<p>Advantages of build tools in general are:</p>
+				<ul>
+					<li>Reproducable build: not depending on IDE or computer</li>
+					<li>Saves a lot of time compared to manual build</li>
+					<li>Less human typing = less chance of mistakes</li>
+					<li>Runs your unit tests for you</li>
+					<li>Automatically deploy new builds - always up to date</li>
+					<li>Autmatically check if you did not break anything</li>
+				</ul>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="intro">
+				<h1>Why Maven?</h1>
+				<p>Maven is specifically known for dependency management</p>
+				<p>and project management options.</p>
+				<ul>
+					<li>Uniformity: all Maven projects work the same way</li>
+					<li>Dependencies are managed for you</li>
+					<li>Document structure is forced / standardised</li>
+					<li>Provides project information such as versions etc</li>
+					<li>Maven Archetypes: project templates that others can use </li>
+				</ul>
+			</div>
+		</div>
+		<div class="slide">
+			<div class="intro">
+				<h1>Why not?</h1>
+				<p>Maven is not very flexible.</p>
+				<br>
+				<img src="imgs/mavensaysno.jpg" class="unicorn" alt="Maven says no"/>
+				<h3>The structure convention is forced.</h3>
+			</div>
+		</div>
+	</div>
+
+	<div class="section" id="section4">
+		<div class="intro">
+			<h1>Useful Links</h1>
+			<p> Quick start Maven with Spring Boot.</p>
+			<p></p>
+			<p> <a href="http://maven.apache.org/guides/" target="_blank"> Maven official documentation</a> & how to use 
+			<a href="https://spring.io/guides/gs/maven/" target="_blank">Maven with Spring Boot.</a></p>
+			<br>
+			<img src="imgs/google.jpg" class='cartoon' alt="Google is your friend"/>
+			<h3>Remember: Google is your friend.</h3>
+		</div>
+	</div>
+		
+</div>
+
+</body>
+
+
+
+</html>

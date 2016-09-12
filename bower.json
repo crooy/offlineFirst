@@ -1,0 +1,21 @@
+{
+  "name": "jquery-ajax",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Judith Crooy<joedid@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "fullpage.js": "fullpage#^2.8.4"
+  }
+}
