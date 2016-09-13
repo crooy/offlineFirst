@@ -12,9 +12,17 @@ who am i and plug WL
 slide:  empty screen with just title of the talk
 text: Good evening.
 
-Who here likes to take out his phone on the toilet to read something? reading HackerNews?
-Who here works in an office with bad wifi in the toilet?
-Ever tried to send a whatsapp or tag a beer using untappd in bar with not 3g or wifi?
+Founder of WL, show some promo content
+So if you are looking for new way to discover a city, or if you are foodie. Get yourself inspired at Withlocals.com, we have great locals offering things to do and food experiences.
+
+Who likes special beer?
+Who uses untappd?
+Anybody ever tried to tag a beer in a bar without 3g
+
+
+After this presentation you will know about offline websites.
+You will think about offline first,
+but most of all you will be annoyed with online-only websites.
 
 slide: screenshot of no-network error in untappd
 So why are so many mobile apps (web or native alike) treat being offline as an error?
