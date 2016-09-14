@@ -1,12 +1,10 @@
-var CACHE_NAME = 'dependencies-cache';
 
 // Files required to make this app work offline
 var REQUIRED_FILES = [
   'style.css',
   'index.html',
   '/', // Separate URL than index.html!
-  'app.js',
-  'sw.js',
+  'app.js',  
 
   'bower_components/fullpage.js/jquery.fullPage.css',
   'bower_components/jquery/dist/jquery.min.js',
@@ -16,7 +14,7 @@ var REQUIRED_FILES = [
 self.addEventListener('install', function(event) {
   // Perform install step:  loading each required file into cache
   event.waitUntil(
-    caches.open(CACHE_NAME)
+    caches.open('dependencies-cache')
       .then(function(cache) {
         // Add all offline dependencies to the cache
         return cache.addAll(REQUIRED_FILES);
