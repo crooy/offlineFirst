@@ -4,11 +4,12 @@ const REQUIRED_FILES = [
   'style.css',
   'index.html',
   '/', // Separate URL than index.html!
-  'app.js',  
+  'app.js',
   'imgs/noimage.jpg',
   'bower_components/fullpage.js/jquery.fullPage.css',
   'bower_components/jquery/dist/jquery.min.js',
-  'bower_components/fullpage.js/jquery.fullPage.min.js'
+  'bower_components/fullpage.js/jquery.fullPage.min.js',
+  'run_prettify.js'
 ];
 
 self.addEventListener('install', function (event) {

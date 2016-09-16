@@ -9,6 +9,7 @@
 	<meta name="keywords"  content="offline-first, webdevelopment" />
 	<meta name="Resource-type" content="Document" />
 
+	<script src="bower_components/localforage/dist/localforage.min.js"></script>
 	<script src="app2.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css" />
@@ -16,12 +17,14 @@
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="bower_components/fullpage.js/jquery.fullPage.min.js"></script>
+	<script src="run_prettify.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function() {
 
 			$('#fullpage').fullpage({
 				sectionsColor: ['#52D1DC','#E8F1F2', '#99E1D9', '#84C0C6', '#EBEBD3'],
+				controlArrows: false,
 				 anchors: ['home', 'intro', 'mobile-first', 'offline-first', 'demo'],
 				menu: '#menu',
 				scrollingSpeed: 1000
@@ -55,52 +58,103 @@
 
 		<div class="slide" id="title">
 			<div class="intro">
-				<h1>No wifi - no social life</h1>
-				<h3>How will they know you drank beer?</h3>
+				<!-- <h1>No wifi - no social life</h1>
+				<h3>How will they know you drank beer?</h3> -->
 				<img src="imgs/untappd-offline.png" class="screenshot" alt="Untappd error"/>
 			</div>
 		</div>
 
-		<div class="slide" id="title">
-			<div class="intro">
-				<h1>No 3g - no HN</h1>
-				<img src="imgs/HN-offline.png" class="screenshot" alt="Untappd error"/>
-			</div>
-		</div>
-
-	</div>
-
-
-	<div class="section" id="section2">
 
 		<div class="slide">
 			<div class="intro">
-				<h1>First Mobile First</h1>
 				<img src="imgs/mobile-first.jpg" class="screenshot" alt="Untappd error"/>
 			</div>
 		</div>
 
 		<div class="slide">
 		 <div class="intro">
-			 <h1>Offline</h1>
-			 <ul>
-				 <li>pageload</li>
-				 <li>content</li>
-				 <li>progressive UX</li>
-			 </ul>
+			 <h1>Offline first?</h1>
 		 </div>
 	 </div>
 
 	 <div class="slide">
 		<div class="intro">
 			<ul>
+				<li style="text-decoration: line-through;">AppCache</li>
 				<li>Service worker</li>
-				<li style="text-decoration: line-through;">webworker</li>
 				<li>Cache API</li>
 				<li>Storage API</li>
+				<li style="text-decoration: line-through;">WebSQL</li>
+				<li>IndexdDB</li>
 			</ul>
 		</div>
 	</div>
+
+	<div class="slide">
+	 <div class="intro">
+		 <h1>Service Worker</h1>
+	 </div>
+ </div>
+
+ <div class="slide">
+  <div class="intro">
+ 	 <ul>
+ 		 <li>UpUP.js</li>
+ 		 <li>webpack-offline</li>
+ 		 <li>offline.js</li>
+ 		 <li>...</li>
+ 	 </ul>
+  </div>
+ </div>
+
+
+ <div class="slide">
+	<div class="intro">
+		<h1 style="text-decoration: line-through;">WebSQL</h1>
+		<pre class="prettyprint">
+var db = openDatabase(
+		'todos1',
+		'1',
+		'todo list example db',
+		2 * 1024 * 1024);
+			</pre>
+	</div>
+</div>
+<div class="slide">
+ <div class="intro">
+	 <h1>IndexedDB</h1>
+	 <pre class="prettyprint">
+window.indexedDB = window.indexedDB ||
+			window.webkitIndexedDB ||
+			window.mozIndexedDB ||
+			window.msIndexedDB;
+
+// Handle the prefix of Chrome to IDBTransaction/IDBKeyRange.
+if ('webkitIndexedDB' in window) {
+  window.IDBTransaction = window.webkitIDBTransaction;
+  window.IDBKeyRange = window.webkitIDBKeyRange;
+}
+
+indexedDB.db = null;
+// Hook up the errors to the console so we could see it.
+// In the future, we need to push these messages to the user.
+indexedDB.onerror = function(e) {
+  console.log(e);
+};
+</pre>
+ </div>
+</div>
+
+<div class="slide">
+ <div class="intro">
+	 <ul>
+		 <li>PouchDB</li>
+		 <li>LocalForage</li>
+		 <li>LawnChair</li>
+		 <li>...</li>
+	 </ul>
+ </div>
+</div>
 
 		<div class="slide" id="title">
 			<div class="intro">
@@ -112,7 +166,7 @@
 
 	</div>
 
-
+</div>
 
 </div>
 

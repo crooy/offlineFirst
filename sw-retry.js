@@ -1,31 +1,5 @@
 importScripts('bower_components/localforage/dist/localforage.min.js');
 
-function isEquivalent(a, b) {
-    // Create arrays of property names
-    var aProps = Object.getOwnPropertyNames(a);
-    var bProps = Object.getOwnPropertyNames(b);
-
-    // If number of properties is different,
-    // objects are not equivalent
-    if (aProps.length != bProps.length) {
-        return false;
-    }
-
-    for (var i = 0; i < aProps.length; i++) {
-        var propName = aProps[i];
-
-        // If values of same property are not equal,
-        // objects are not equivalent
-        if (a[propName] !== b[propName]) {
-            return false;
-        }
-    }
-
-    // If we made it this far, objects
-    // are considered equivalent
-    return true;
-}
-
 // Files required to make this app work offline
 const REQUIRED_FILES = [
   'style.css',
@@ -36,7 +10,8 @@ const REQUIRED_FILES = [
   'bower_components/fullpage.js/jquery.fullPage.css',
   'bower_components/jquery/dist/jquery.min.js',
   'bower_components/fullpage.js/jquery.fullPage.min.js',
-  'bower_components/localforage/dist/localforage.min.js'
+  'bower_components/localforage/dist/localforage.min.js',
+  'run_prettify.js'
 ];
 
 self.addEventListener('install', function (event) {
@@ -80,59 +55,42 @@ self.addEventListener('activate', function(event) {
   event.waitUntil(self.clients.claim());
 });
 
-function queueMsg(msg){
-  return localforage.getItem("queue").then((q)=>{
-      const queue = q || [];
-      queue.push(msg);
-      localforage.setItem("queue", queue);
-      console.log("queued the message ", msg);
-      return queue;
-  });
-}
-
 function removeFromQueue(msg){
   return localforage.getItem("queue").then((q)=>{
       const queue = q || [];
-      const filteredQueue = queue.filter((x)=> !isEquivalent(x,msg));
-      localforage.setItem("queue", filteredQueue);
+      const filteredQueue = queue.filter((x)=> JSON.stringify(msg) !== JSON.stringify(x));
       console.log("removed the message from the queue", msg);
-      return queue;
+      return localforage.setItem("queue", filteredQueue);
   });
 }
-
-self.addEventListener('message', function(event) {
-  console.log("sw got message ", event);
-  if (event.data.msgType === "postLater"){
-    queueMsg(event.data);
-  }
-});
 
 self.addEventListener('sync', function (event) {
   console.log("sw got sync ", event);
   if (event.tag === 'postNow') {
-    const results = sendPostQueue(self).then((returnMessages)=>{
+    event.waitUntil(sendPostQueue(self).then((returnMessages)=>{
       if (!returnMessages) return ;
       return returnMessages.map((msg)=>{
         if (!msg) return ;
-        return self.clients.matchAll().then(all => all.map(client => client.postMessage(msg)));
+        return self.clients
+                  .matchAll()
+                  .then(all => {
+                    return all.map(client => client.postMessage(msg))
+                  });
       })
-    })
-    event.waitUntil(results);
+    }));
   }
 });
 
 const sendPostQueue = function(self){
   return localforage.getItem("queue").then((queue)=>{
     if (!queue) return null;
+    console.log("sw going to post queue ", queue);
     return Promise.all(queue.map((msg)=>{
       return fetch(msg.url, msg.opt)
         .then(function(res){
           return res.json();
         }).then((data)=>{
-          removeFromQueue(msg);
-          return data;
-        }).catch(()=>{
-          return null;
+          return removeFromQueue(msg).then(()=> data);
         })
     }));
   });
