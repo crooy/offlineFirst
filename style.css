@@ -7,17 +7,9 @@ form,fieldset,input,textarea,p,blockquote,th,td {
     margin: 0;
 }
 
-#section0 img,
 #section1 img{
 	margin: 20px 0 0 0;
-}
-#section2 img{
-	margin: 20px 0 0 52px;
-}
-#section3 img{
-	bottom: 0px;
-	/*position: absolute;*/
-	/*margin-left: -420px;*/
+  max-width: 95vw;
 }
 .intro p{
 	width: 50%;

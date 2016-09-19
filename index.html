@@ -10,7 +10,11 @@
 	<meta name="Resource-type" content="Document" />
 
 	<script src="bower_components/localforage/dist/localforage.min.js"></script>
-	<script src="app2.js"></script>
+
+
+	<script src="app.js"></script>
+
+
 
 	<link rel="stylesheet" type="text/css" href="bower_components/fullpage.js/jquery.fullPage.css" />
 	<link rel="stylesheet" type="text/css" href="style.css" />
@@ -50,16 +54,19 @@
 
 		<div class="slide ">
 			<div class="intro">
-				<h1>Withlocals.com</h1>
-				<h2>Shameless Withlocals plug &hearts;</h2>
-				<img src="imgs/WLscreenshot.png" class='cartoon' alt="Withlocals home screen">
+
+				<video autoplay controls poster="https://withlocals-com-res.cloudinary.com/video/upload/v1472712370/Withlocals_Originals_-_The_best_Tours_Personalized_for_You_qbs26k.jpg">
+			  <source src="https://withlocals-com-res.cloudinary.com/video/upload/v1472712370/Withlocals_Originals_-_The_best_Tours_Personalized_for_You_qbs26k.webm" type="video/webm"/>
+			  <source src="https://withlocals-com-res.cloudinary.com/video/upload/v1472712370/Withlocals_Originals_-_The_best_Tours_Personalized_for_You_qbs26k.mp4" type="video/mp4"/>
+			  <source src="https://withlocals-com-res.cloudinary.com/video/upload/v1472712370/Withlocals_Originals_-_The_best_Tours_Personalized_for_You_qbs26k.ogv" type="video/ogg"/>
+			</video>
 			</div>
 		</div>
 
 		<div class="slide" id="title">
 			<div class="intro">
-				<!-- <h1>No wifi - no social life</h1>
-				<h3>How will they know you drank beer?</h3> -->
+				<h1>No wifi - no social life</h1>
+				<h3>How will they know you drank beer?</h3>
 				<img src="imgs/untappd-offline.png" class="screenshot" alt="Untappd error"/>
 			</div>
 		</div>
@@ -85,23 +92,45 @@
 				<li>Cache API</li>
 				<li>Storage API</li>
 				<li style="text-decoration: line-through;">WebSQL</li>
-				<li>IndexdDB</li>
+				<li>IndexedDB</li>
 			</ul>
 		</div>
 	</div>
 
 	<div class="slide">
 	 <div class="intro">
-		 <h1>Service Worker</h1>
+		 <h1>Service Worker static caching</h1>
+		 <img src="imgs/offline1.png" />
 	 </div>
  </div>
 
  <div class="slide">
+	<div class="intro">
+		<h1>Service Worker dynamic caching</h1>
+		<img src="imgs/offline2.png" />
+	</div>
+</div>
+
+<div class="slide">
+ <div class="intro">
+	 <h1>Service Worker push</h1>
+	 <img src="imgs/offline4.png" />
+ </div>
+</div>
+
+<div class="slide">
+ <div class="intro">
+	 <h1>Service Worker sync</h1>
+	 <img src="imgs/offline3.png" />
+ </div>
+</div>
+
+ <div class="slide">
   <div class="intro">
  	 <ul>
- 		 <li>UpUP.js</li>
- 		 <li>webpack-offline</li>
- 		 <li>offline.js</li>
+ 		 <li><h2>UpUP.js<h2></li>
+ 		 <li><h2>webpack-offline</h2></li>
+ 		 <li><h2>offline.js<h2></li>
  		 <li>...</li>
  	 </ul>
   </div>
@@ -148,9 +177,9 @@ indexedDB.onerror = function(e) {
 <div class="slide">
  <div class="intro">
 	 <ul>
-		 <li>PouchDB</li>
-		 <li>LocalForage</li>
-		 <li>LawnChair</li>
+		 <li><h2>PouchDB</h2></li>
+		 <li><h2>LocalForage</h2></li>
+		 <li><h2>LawnChair</h2></li>
 		 <li>...</li>
 	 </ul>
  </div>
